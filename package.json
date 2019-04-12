@@ -1,0 +1,35 @@
+{
+  "name": "carlo-playground",
+  "version": "0.0.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "author": {
+    "name": "Eric Chen",
+    "email": "airkro@qq.com"
+  },
+  "engines": {
+    "node": ">=10.15.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "carlo": "^0.9.45",
+    "get-port": "^5.0.0",
+    "internal-ip": "^4.3.0",
+    "nodemon": "^1.18.11",
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.19.0"
+  },
+  "optionalDependencies": {
+    "prettier": "^1.17.0"
+  },
+  "scripts": {
+    "start": "nodemon main/parcel.js --watch false --quiet",
+    "dev": "parcel serve src/index.html"
+  },
+  "browserslist": [
+    "chrome >= 73"
+  ],
+  "plugins": {
+    "autoprefixer": {}
+  }
+}
