@@ -10,6 +10,9 @@
   "engines": {
     "node": ">=10.15.3"
   },
+  "dependencies": {
+    "mitt": "^1.1.3"
+  },
   "devDependencies": {
     "autoprefixer": "^9.5.1",
     "carlo": "^0.9.45",

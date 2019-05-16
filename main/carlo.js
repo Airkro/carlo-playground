@@ -1,4 +1,7 @@
 const carlo = require('carlo');
+const { rpc } = require('carlo/rpc');
+
+const mitt = require('mitt')();
 
 module.exports = async function createCarlo(host, port) {
   // Launch the browser.
@@ -13,7 +16,9 @@ module.exports = async function createCarlo(host, port) {
   await app.exposeFunction('env', () => process.env);
 
   // Navigate to the main page of your app.
-  await app.load(`http://${host}:${port}`);
+  await app.load(`http://${host}:${port}`, rpc.handle(mitt));
+
+  mitt.emit('foo', 'bar');
 
   return app;
 };
